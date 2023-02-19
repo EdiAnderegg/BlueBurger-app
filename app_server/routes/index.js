@@ -1,13 +1,10 @@
 const express = require('express');
 const router = express.Router();
-
-//controller functions
-const homepageController = (req, res) => {
-  res.render('index', {title: 'Blue Burger'});
-}
+// controllers
+const ctrlMain = require('../controllers/main');
 
 /* GET home page. */
-router.get('/', homepageController);
+router.get('/', ctrlMain.index);
 
 module.exports = router;
 
