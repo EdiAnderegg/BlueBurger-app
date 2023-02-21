@@ -8,18 +8,58 @@ html body
 body 
 {
   background:#050505;
+  background-image: url('../images/Burger_Background_2.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-x: -130%;
+  background-position-y: 55%;
+  background-size: 140%;
+  
 }
 
-.fixed-top
+.header
 {
-  position: fixed;
-  top: 0;
-  width: 100%;
+  position: relative;
+  height: 4rem;
+  background-color: #FEBD02;
+  margin: 1rem 1rem 0rem 1rem;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
 }
 
-.fixed-bottom
+.header-content
 {
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  display: grid;
   width: 100%;
+  grid-template-columns: [first] 1rem [line2] auto [line3] 4rem [line4] 1rem [end];
+
+}
+
+.header-navigation
+{
+  justify-self: start;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.header-triangle
+{
+  justify-self: center;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  width: 0;
+  height: 0;
+  border-left: 0.9rem solid transparent;
+  border-right: 0.9rem solid transparent;
+  border-top: 1.4rem solid #FEBD02;
+  
+}
+
+.footer
+{
+  position: relative;
+  height: 4rem;
+  background-color: #FEBD02;
+  margin: 0rem 1rem 1rem 1rem;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
 }

@@ -7,14 +7,18 @@ html
     link(rel='stylesheet', href='stylesheets/all.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')    
   body
+    div.fixed-top.text-center
+      div.header header
+      div.header-content
+        div.header-navigation
+        div.header-triangle
     div.container-fluid
-      div.fixed-top Header
       div.row.align-items-center(style='height: 100dvh')
         div.col-7
-          block content
+          block content 
         div.col.has-bg-img
-          img.bg-img(src='images/Burger_Background_2.png', style='height: 80dvh')
-      div.fixed-bottom Footer
+    div.fixed-bottom.text-center
+      div.footer footer
   script(src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js" integrity="sha512-6UofPqm0QupIL0kzS/UIzekR73/luZdC6i/kXDbWnLOJoqwklBK6519iUnShaYceJ0y4FaiPtX/hRnV/X/xlUQ==" crossorigin="anonymous" referrerpolicy="no-referrer")
   script(src='/javascripts/bootstrap.min.js')
