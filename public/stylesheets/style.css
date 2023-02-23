@@ -28,6 +28,7 @@ body
 
 .header-content
 {
+  bottom: -1.4rem;
   position: absolute;
   display: grid;
   width: 100%;
@@ -63,3 +64,6 @@ body
   margin: 0rem 1rem 1rem 1rem;
   border-radius: 0rem 0rem 0.5rem 0.5rem;
 }
+
+
+/*Home view*/
