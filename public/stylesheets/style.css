@@ -33,6 +33,33 @@ body
   border-radius: 0.5rem 0.5rem 0rem 0rem;
 }
 
+.header-titles
+{
+  height: 4rem;
+}
+
+.header-title
+{
+  color: #01A1FD;
+  padding-top: 0.25rem;
+  font-size: 2.5rem;
+  font-style: normal;
+  line-height: 3rem;
+  letter-spacing: -0.065em;
+  text-transform: uppercase;
+}
+
+.header-title-2
+{
+  color: black;
+  padding-top: 1.5rem;
+  font-size: 2.25rem;
+  font-style: normal;
+  line-height: 2.75rem;
+  letter-spacing: -0.05em;
+}
+
+
 .header-content
 {
   bottom: -2rem;
