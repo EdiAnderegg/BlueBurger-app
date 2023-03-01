@@ -1,10 +1,13 @@
 extends index
 
 block home 
-  div.text-center
-    h1.text-start.m-4 #{title}
-    h4.text-end Entdecke unsere Kreationen!
-    br 
-    button.homebtn Menu
-    br
+  div.container-fluid
+    div.row.align-items-center(style='min-height: 95dvh')
+      div.col-7
+        div.text-center
+          h1.text-start.m-4 #{title}
+          h4.text-end Entdecke unsere Kreationen!
+          br 
+          button.btn Menu
+          br
     

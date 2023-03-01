@@ -11,16 +11,16 @@ block title
 block nav 
   .d-flex.flex-row.gap-4
     div
-      h2 Home 
+      h6 
+        a(href='/') Home
     div 
-      h2 Über uns 
+      h6 
+        a(href='/aboutUs') Über uns
     div 
-      h2 Kontakt 
+      h6 
+        a(href='/contact') Kontakt
 
 
-block content
-  div.container-fluid
-    div.row.align-items-center(style='height: 95dvh')
-      div.col-7 
-        block home
+block content 
+  block home
     

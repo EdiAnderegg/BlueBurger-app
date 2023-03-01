@@ -1,0 +1,10 @@
+
+
+.footer
+{
+  position: relative;
+  height: 4rem;
+  background-color: var(--yellow);
+  margin: 0rem 1rem 1rem 1rem;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+}

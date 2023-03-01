@@ -1,7 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Livvic:wght@700&display=swap');
+@import url('header.css');
+@import url('footer.css');
+@import url('home.css');
 
 
-
+/*VARIABLES*/
+:root
+{
+  --black: #050505;
+  --yellow: #FEBD02;
+  --blue: #01A1FD;
+  --white: #FAF7F7;
+  --secWhite: rgba(250, 247, 247, 0.7);
+}
 
 html body 
 {
@@ -14,7 +25,7 @@ body
 {
   font-family: 'Livvic', sans-serif;
   font-style: normal;
-  background:#050505;
+  background:var(--black);
   background-image: url('../images/Burger_Background_2.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -24,100 +35,10 @@ body
   
 }
 
-.header
-{
-  position: relative;
-  height: 4rem;
-  background-color: #FEBD02;
-  margin: 1rem 1rem 0rem 1rem;
-  border-radius: 0.5rem 0.5rem 0rem 0rem;
-}
 
-.header-titles
-{
-  height: 4rem;
-}
-
-.header-title
-{
-  color: #01A1FD;
-  padding-top: 0.25rem;
-  font-size: 2.5rem;
-  font-style: normal;
-  line-height: 3rem;
-  letter-spacing: -0.065em;
-  text-transform: uppercase;
-}
-
-.header-title-2
-{
-  color: black;
-  padding-top: 1.5rem;
-  font-size: 2.25rem;
-  font-style: normal;
-  line-height: 2.75rem;
-  letter-spacing: -0.05em;
-}
-
-
-.header-content
-{
-  bottom: -2rem;
-  position: absolute;
-  display: grid;
-  height: 2rem;
-  width: 100%;
-  grid-template-columns: [first] auto [line1] 4rem [line2] 1rem [end];
-
-}
-
-.header-navigation
-{
-  justify-self: start;
-  align-self: end;
-  grid-column-start: first;
-  grid-column-end: line1;
-}
-
-.header-triangle
-{
-  
-  justify-self: center;
-  grid-column-start: line1;
-  grid-column-end: line2;
-  width: 0;
-  height: 0;
-  border-left: 0.9rem solid transparent;
-  border-right: 0.9rem solid transparent;
-  border-top: 1.4rem solid #FEBD02;
-  
-}
-
-.footer
-{
-  position: relative;
-  height: 4rem;
-  background-color: #FEBD02;
-  margin: 0rem 1rem 1rem 1rem;
-  border-radius: 0rem 0rem 0.5rem 0.5rem;
-}
-
-
-/*Home view*/
-
-/*header*/
-h2
-{
-  color: rgba(250, 247, 247, 0.7);
-  font-size: 0.75rem;
-  line-height: 0.75rem;
-  letter-spacing: 0em;
-}
-
-/*body*/
 h1
 {
-  color: #FAF7F7;
+  color: var(--white);
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: -0.03em;
@@ -125,15 +46,33 @@ h1
 
 h4
 {
-  color: rgba(250, 247, 247, 0.7);
+  color: var(--secWhite);
   font-size: 2rem;
   line-height: 1.9rem;
   letter-spacing: -0.05em;
 }
 
-.homebtn
+h5
 {
-  background-color: #FEBD02;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.065em;
+  color: var(--secWhite);
+}
+
+h6
+{
+  color: var(--secWhite);
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  letter-spacing: 0em;
+}
+
+.btn
+{
+  color: var(--black);
+  background-color: var(--yellow);
   padding: 0.25em 0.5em 0.25em 0.5em;
   border-style: none;
   border-radius: 0.5rem;
@@ -141,4 +80,13 @@ h4
   line-height: 2.5rem;
   letter-spacing: -0.065em;
   text-transform: uppercase;
+}
+
+a
+{
+  color: var(--secWhite);
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  letter-spacing: 0em;
+  text-decoration: none;
 }
