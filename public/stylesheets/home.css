@@ -1,8 +1,52 @@
 /*View of About Us*/
 
+.dayDisplay
+{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+h5.day, h5.time
+{
+    font-size: 0.85rem;
+    letter-spacing: 0em;
+    line-height: normal;
+}
+
+h5.day
+{
+    margin-left: 2rem;
+}
+
+
 h5.time
 {
+    margin-left: 1rem;
     color: var(--yellow);
-    font-size: 0.8rem;
-    letter-spacing: -0.018em;
+    
+}
+
+/*View of Contact*/
+
+.adressContent
+{
+  margin-top: 6rem;
+}
+
+.adress
+{
+    letter-spacing: 0em;
+    line-height: normal;
+    color: var(--white);
+}
+
+.tel
+{
+    margin-top: 1rem;
+    letter-spacing: 0em;
+    line-height: normal;   
+    color: var(--yellow);
 }

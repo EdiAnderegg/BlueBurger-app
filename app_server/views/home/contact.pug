@@ -1,4 +1,12 @@
 extends index 
 
 block home
-  h1 #{title}
+  div.container-fluid
+    div.row.align-items-center(style='min-height: 95dvh')
+      div.col-7
+        div
+          h1.text-center #{title}
+          div.adressContent
+            h5.adress.text-end Wilerstrasse 125
+            h5.adress.text-end 9230 Flawil 
+            h5.tel.text-end 079 423 123 34

@@ -2,16 +2,16 @@ extends index
 
 block home
   div.container-fluid
-    div.row.align-items-center(style='min-height: 70dvh')
+    div.row.align-items-center(style='min-height: 95dvh')
       div.col-7
-        div.text-center
+        div
           h1.text-center #{title}
-          h1.text-end(style='margin: -0.75rem 1rem 0rem 0rem') #{secTitle}
-          br 
-          .container-fluid 
-            div.row
-              .col
-                h5.day Montag
-              .col 
-                h5.time 17:00 - 21:00
+          h1.text-end(style='margin: -0.75rem 1rem 1rem 0rem') #{secTitle}
+          .container-fluid.p-0
+            each Hrs, Day in {Montag: '17:00 - 21:00', Dienstag: '17:00 - 21:30', Mittwoch: '17:00 - 21:30', Donnerstag: '17:00 - 21:30', Freitag: '17:00 - 22:00', Samstag: '11:00 - 1400  17:00 - 22:00', Sonntag: '11:00 - 14:00  17:00 - 21:30'} 
+              div.row.dayDisplay
+                .col.p-0
+                  h5.day= Day  
+                .col.p-0
+                  h5.time= Hrs
         
