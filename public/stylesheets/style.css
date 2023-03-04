@@ -22,6 +22,12 @@ html, body
   height: 100%;
 }
 
+html
+{
+  background:var(--black);
+}
+
+
 body 
 {
   font-family: 'Livvic', sans-serif;
@@ -83,11 +89,3 @@ h6
   text-transform: uppercase;
 }
 
-a
-{
-  color: var(--secWhite);
-  font-size: 0.75rem;
-  line-height: 0.75rem;
-  letter-spacing: 0em;
-  text-decoration: none;
-}

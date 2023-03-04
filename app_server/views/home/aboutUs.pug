@@ -5,10 +5,10 @@ block home
     div.row.align-items-center(style='min-height: 95dvh')
       div.col-7
         div
-          h1.text-center #{title}
-          h1.text-end(style='margin: -0.75rem 1rem 1rem 0rem') #{secTitle}
+          h1.text-center #{aboutUsContent.title}
+          h1.text-end(style='margin: -0.75rem 1rem 1rem 0rem') #{aboutUsContent.subTitle}
           .container-fluid.p-0
-            each Hrs, Day in {Montag: '17:00 - 21:00', Dienstag: '17:00 - 21:30', Mittwoch: '17:00 - 21:30', Donnerstag: '17:00 - 21:30', Freitag: '17:00 - 22:00', Samstag: '11:00 - 1400  17:00 - 22:00', Sonntag: '11:00 - 14:00  17:00 - 21:30'} 
+            each Hrs, Day in aboutUsContent.body.week 
               div.row.dayDisplay
                 .col.p-0
                   h5.day= Day  

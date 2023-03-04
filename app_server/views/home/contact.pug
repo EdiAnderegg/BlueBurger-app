@@ -5,8 +5,8 @@ block home
     div.row.align-items-center(style='min-height: 95dvh')
       div.col-7
         div
-          h1.text-center #{title}
+          h1.text-center #{contactContent.title}
           div.adressContent
-            h5.adress.text-end Wilerstrasse 125
-            h5.adress.text-end 9230 Flawil 
-            h5.tel.text-end 079 423 123 34
+            h5.adress.text-end #{contactContent.body.adress.street}
+            h5.adress.text-end #{contactContent.body.adress.zipCode} #{contactContent.body.adress.city}
+            h5.tel.text-end #{contactContent.body.tel}
