@@ -49,7 +49,8 @@ process.on('SIGINT', ()=> {
     });
 });
 
-
+//Conecting external DB files
+require('./home');
 
 
 
