@@ -12,7 +12,7 @@ if(process.platform === 'win32'){
 }
 
 
-const dbURI = 'mongodb://localhost/BlueBurger';
+const dbURI = 'mongodb://0.0.0.0/BlueBurger';
 mongoose.connect(dbURI,{useNewUrlParser: true});
 
 
