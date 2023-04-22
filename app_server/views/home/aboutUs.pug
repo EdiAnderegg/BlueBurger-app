@@ -10,8 +10,11 @@ block home
           .container-fluid.p-0
             each Hrs, Day in aboutUsContent.body.week 
               div.row.dayDisplay
-                .col.p-0
-                  h5.day= Day  
-                .col.p-0
-                  h5.time= Hrs
+                if Day == '_id'
+
+                else
+                  .col.p-0
+                    h5.day= Day 
+                  .col.p-0
+                    h5.time= Hrs
         

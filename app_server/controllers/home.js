@@ -1,32 +1,49 @@
+const request = require('request');
+const apiOptions = {
+    server: 'http://localhost:3000'
+};
+/*if(process.env.NODE_ENV === 'production'){
+    apiOptions.server = 'https://pure-temple-67771.herokuapp.com'
+}*/
+
+
+
 /* GET home page. */
+const renderHome = (req,res) => {
+    res.render('home/home', {
+        homeContent : {
+            title: 'Die Burgers',
+            body: 'Entdecke unsere Kreationen!'
+        }
+    });
+}
+
 const home = (req,res) => {
-res.render('home/home', {
-    homeContent : {
-        title: 'Die Burgers',
-        body: 'Entdecke unsere Kreationen!'
-    }
-});
+
+renderHome(req,res);
 };
 
 /* GET aboutUs page. */
-const aboutUs = (req,res) => {
+const renderAboutUs = (req, res, responseBody) => {
     res.render('home/aboutUs', {
-        aboutUsContent : {
-            title : 'Liefer',
-            subTitle : 'zeiten',
-            body : {
-                week: {
-                    Montag: '17:00 - 21:00', 
-                    Dienstag: '17:00 - 21:30', 
-                    Mittwoch: '17:00 - 21:30', 
-                    Donnerstag: '17:00 - 21:30', 
-                    Freitag: '17:00 - 22:00', 
-                    Samstag: '11:00 - 1400  17:00 - 22:00', 
-                    Sonntag: '11:00 - 14:00  17:00 - 21:30'
-                }
-            }
-        }
+        aboutUsContent : responseBody
     });
+}
+
+const aboutUs = (req,res) => {
+    const path = '/api/aboutUs';
+    const requestOptions = {
+        url : `${apiOptions.server}${path}`,
+        method: 'GET',
+        json: {},
+    };
+    request(requestOptions, (err, { statusCode },body)=>{
+        let data = [];
+        if(statusCode === 200 && body.length){
+            data = body[0];
+        }
+        renderAboutUs(req,res,data);
+    })
     };
 
 /* GET contact page. */
